@@ -112,6 +112,7 @@
 		53F18BA31401508200E1A6E8 /* NSValue+Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+Expecta.h"; sourceTree = "<group>"; };
 		53F18BA6140150A100E1A6E8 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		53F18BA8140150C100E1A6E8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		53F18BAA1401510800E1A6E8 /* DKLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKLogger.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				537873C81401040F00D9B746 /* DKSupport.h */,
+				53F18BAA1401510800E1A6E8 /* DKLogger.h */,
 				531E0E5E140112CC007B0BB5 /* DKPredicateBuilder */,
 				537873C91401040F00D9B746 /* NSArray */,
 				537873CC1401040F00D9B746 /* NSDate */,
