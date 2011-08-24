@@ -1,14 +1,15 @@
 # DKSupport
 
 `DKSupport` is a collection of utility classes and Objective-C
-categories that make working with certain classes easier.
+categories that make working UIKit easier.
 
 It is used in the apps written by [Mostly Disco](http://www.mostlydisco.com)
 and [The Frontier Group](http://www.thefrontiergroup.com.au)
 
 ## Installation
 
-**These installation instructions are for XCode 4**
+**Note: These installation instructions are for XCode 4. XCode 3
+installations instructions do not exist at the moment.**
 
 1. Checkout the code into your project root
 
