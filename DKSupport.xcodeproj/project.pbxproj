@@ -493,7 +493,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Specs/Expecta\"",
 					"\"$(SRCROOT)/External/Expecta\"",
 				);
 				OTHER_LDFLAGS = (
@@ -532,7 +531,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Specs/Expecta\"",
 					"\"$(SRCROOT)/External/Expecta\"",
 				);
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
