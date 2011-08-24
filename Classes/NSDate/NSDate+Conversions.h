@@ -18,7 +18,7 @@
 - (NSDate*)beginingOfDay;
 - (NSDate*)endOfDay;
 
-- (bool)isEqualToDate:(NSDate*)date;
+- (bool)isSameDayAs:(NSDate*)date;
 - (bool)isToday;
 
 @end

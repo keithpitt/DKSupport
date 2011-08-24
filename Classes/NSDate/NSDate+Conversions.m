@@ -30,7 +30,7 @@
     
 }
 
-- (NSDate*)beginingOfDay {
+- (NSDate *)beginingOfDay {
     
     return [NSDate dateFromString:[self format:@"yyyy-MM-dd 00:00:00"]];
     
@@ -42,7 +42,7 @@
     
 }
 
-- (bool)isEqualToDate:(NSDate*)date {
+- (bool)isSameDayAs:(NSDate*)date {
     
     NSString *firstDate = [self format:DKSupportShortDateFormat];
     NSString *secondDate = [date format:DKSupportShortDateFormat];
@@ -53,7 +53,7 @@
 
 - (bool)isToday {
     
-    return [self isEqualToDate:[NSDate date]];
+    return [self isSameDayAs:[NSDate date]];
     
 }
 
