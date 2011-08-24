@@ -57,6 +57,8 @@ To build the documentation, just run `rake` in the root of the project. You will
 * http://code.google.com/p/json-framework
 * https://github.com/petejkim/expecta
 * https://github.com/pivotal/cedar
+* http://boredzo.org/iso8601unparser/
+* http://regexkit.sourceforge.net/#RegexKitLite
 
 ## Note on Patches/Pull Requests
 
