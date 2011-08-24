@@ -117,53 +117,45 @@ in Ruby.
 
 #### Conversions
 
-- (NSString *)format:(NSString*)format;
-- (NSDate*)utc;
-- (NSDate*)beginingOfDay;
-- (NSDate*)endOfDay;
-
-- (bool)isEqualToDate:(NSDate*)date;
-- (bool)isToday;
-
-
-`format` provides a quick way of formatting an `NSDate`. For possible
-formats, see http://unicode.org/reports/tr35/tr35-10.html#Date_Format_Patterns
+`- (NSString *)format:(NSString *)format` provides a quick way of formatting an
+`NSDate`. For possible formats, see http://unicode.org/reports/tr35/tr35-10.html#Date_Format_Patterns
 
     NSDate * date = [NSDate date]
 
     NSLog(@"%@", [date format:@"yyyy-MM-dd"]);
 
-`utc` will return the date converted to UTC
+`- (NSDate *)utc` will return the date converted to UTC
 
     // The current time in UTC
     NSDate * utcDate = [[NSDate date] utc];
 
-`beginingOfDay` will return an `NSDate` with the time portion set to the
+`- (NSDate *)beginingOfDay` will return an `NSDate` with the time portion set to the
 beginning of the day
 
     // Returns the begining of today
     NSDate * beginingOfDay = [[NSDate date] beginingOfDay];
 
-`endOfDay` will return an `NSDate` with the time portion set to the
+`- (NSDate *)endOfDay` will return an `NSDate` with the time portion set to the
 beginning of the day
 
     // Returns the end of today
     NSDate * endOfDay = [[NSDate date] endOfDay];
 
-`isSameDayAs` will return `TRUE` if the provided `NSDate` is on the same
-day
+`- (BOOL)isSameDayAs:(NSDate*)date;` will return `TRUE` if the provided `NSDate`
+is on the same day
 
     // Will return TRUE
     [[NSDate date] isSameDayAs:[NSDate date]];
 
-`isToday` will return `TRUE` if the date is today
+`- (BOOL)isToday` will return `TRUE` if the date is today
 
     // Will return TRUE
     [[NSDate date] isToday];
 
 #### Initializers
 
-`dateFromString` will create an `NSDate` object using the `ISO8601DateFormatter`
+`+ (NSDate *)dateFromString:(NSString *)string;` will create an `NSDate` object using the
+`ISO8601DateFormatter`
 
     NSString * someDate = @"05/12/2011 12:52:13 UTC";
 
