@@ -342,6 +342,13 @@ handle responses via a block syntax
 
 `- (void)setParentController:(UIViewController *)parent;`
 
+`UIViewController` classes in `UIKit` have a `parentViewController` property
+used by `UINavigationController`. As of iOS 4.0, this property is read
+only. This method allows you to manually set the `parentViewController`
+property of a `UIViewController`.
+
+    [controller setParentController:someOtherViewController];
+
 ## Running Specs
 
 To run the specs, open [DKSupport.xcodeproj](https://github.com/keithpitt/DKSupport/tree/master/DKSupport.xcodeproj) project, and run the `Specs` target.
