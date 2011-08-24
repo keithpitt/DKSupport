@@ -1,0 +1,1013 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>NSString(Inflections) Category Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">DKSupport </a></h1>
+				<a id="developerHome" href="../index.html">DiscoKit</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">NSString(Inflections) Category Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/camelize">&nbsp;&nbsp;&nbsp;&nbsp;- camelize</option>
+	
+	<option value="//api/name/camelizeWithLowerFirstLetter">&nbsp;&nbsp;&nbsp;&nbsp;- camelizeWithLowerFirstLetter</option>
+	
+	<option value="//api/name/capitalize">&nbsp;&nbsp;&nbsp;&nbsp;- capitalize</option>
+	
+	<option value="//api/name/classify">&nbsp;&nbsp;&nbsp;&nbsp;- classify</option>
+	
+	<option value="//api/name/dasherize">&nbsp;&nbsp;&nbsp;&nbsp;- dasherize</option>
+	
+	<option value="//api/name/demodulize">&nbsp;&nbsp;&nbsp;&nbsp;- demodulize</option>
+	
+	<option value="//api/name/foreignKey">&nbsp;&nbsp;&nbsp;&nbsp;- foreignKey</option>
+	
+	<option value="//api/name/foreignKeyWithoutIdUnderscore">&nbsp;&nbsp;&nbsp;&nbsp;- foreignKeyWithoutIdUnderscore</option>
+	
+	<option value="//api/name/humanize">&nbsp;&nbsp;&nbsp;&nbsp;- humanize</option>
+	
+	<option value="//api/name/ordinalize">&nbsp;&nbsp;&nbsp;&nbsp;- ordinalize</option>
+	
+	<option value="//api/name/pluralize">&nbsp;&nbsp;&nbsp;&nbsp;- pluralize</option>
+	
+	<option value="//api/name/singularize">&nbsp;&nbsp;&nbsp;&nbsp;- singularize</option>
+	
+	<option value="//api/name/tableize">&nbsp;&nbsp;&nbsp;&nbsp;- tableize</option>
+	
+	<option value="//api/name/titleize">&nbsp;&nbsp;&nbsp;&nbsp;- titleize</option>
+	
+	<option value="//api/name/underscore">&nbsp;&nbsp;&nbsp;&nbsp;- underscore</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/camelize">camelize</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/camelizeWithLowerFirstLetter">camelizeWithLowerFirstLetter</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/capitalize">capitalize</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/classify">classify</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dasherize">dasherize</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/demodulize">demodulize</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/foreignKey">foreignKey</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/foreignKeyWithoutIdUnderscore">foreignKeyWithoutIdUnderscore</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/humanize">humanize</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/ordinalize">ordinalize</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pluralize">pluralize</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/singularize">singularize</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tableize">tableize</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/titleize">titleize</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/underscore">underscore</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="NSString(Inflections) Category Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">NSString(Inflections) Category Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">NSString+Inflections.h<br />NSString+Inflections.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pluralize">&ndash;&nbsp;pluralize</a></code>
+		<span class="tooltip"><p>Returns the plural form of the word in the string.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/singularize">&ndash;&nbsp;singularize</a></code>
+		<span class="tooltip"><p>The reverse of +pluralize+, returns the singular form of a word in a string.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/humanize">&ndash;&nbsp;humanize</a></code>
+		<span class="tooltip"><p>Capitalizes the first word and turns underscores into spaces and strips a
+trailing &ldquo;_id&rdquo;, if any. Like +titleize+, this is meant for creating pretty output.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/titleize">&ndash;&nbsp;titleize</a></code>
+		<span class="tooltip"><p>Capitalizes all words that are not part of the nonTitlecasedWords.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/tableize">&ndash;&nbsp;tableize</a></code>
+		<span class="tooltip"><p>Create the name of a table like Rails does for models to table names. This method
+uses the +pluralize+ method on the last word in the string.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/classify">&ndash;&nbsp;classify</a></code>
+		<span class="tooltip"><p>Create a class name from a plural table name like Rails does for table names to models.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/camelize">&ndash;&nbsp;camelize</a></code>
+		<span class="tooltip"><p>Converts an underscored separated string into a CamelCasedString.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/camelizeWithLowerFirstLetter">&ndash;&nbsp;camelizeWithLowerFirstLetter</a></code>
+		<span class="tooltip"><p>Converts an underscored separated string into a camelCasedString with the
+first letter lower case.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/underscore">&ndash;&nbsp;underscore</a></code>
+		<span class="tooltip"><p>Makes an underscored, lowercase form from the expression in the string.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dasherize">&ndash;&nbsp;dasherize</a></code>
+		<span class="tooltip"><p>Replaces underscores with dashes in the string.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/demodulize">&ndash;&nbsp;demodulize</a></code>
+		<span class="tooltip"><p>Removes the module part from the expression in the string.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/foreignKey">&ndash;&nbsp;foreignKey</a></code>
+		<span class="tooltip"><p>Creates a foreign key name from a class name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/foreignKeyWithoutIdUnderscore">&ndash;&nbsp;foreignKeyWithoutIdUnderscore</a></code>
+		<span class="tooltip"><p>Creates a foreign key name from a class name without the <a href="#//api/name/underscore">underscore</a>
+separating the id part.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/ordinalize">&ndash;&nbsp;ordinalize</a></code>
+		<span class="tooltip"><p>Turns a number into an ordinal string used to denote the position in an
+ordered sequence such as 1st, 2nd, 3rd, 4th.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/capitalize">&ndash;&nbsp;capitalize</a></code>
+		<span class="tooltip"><p>Capitalizes the first letter and makes everything else lower case.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/camelize" title="camelize"></a>
+	<h3 class="subsubtitle method-title">camelize</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Converts an underscored separated string into a CamelCasedString.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)camelize</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Converts an underscored separated string into a CamelCasedString.</p>
+
+<p>Changes &lsquo;/&rsquo; to &lsquo;::&rsquo; to convert paths to namespaces.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+Inflections.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/camelizeWithLowerFirstLetter" title="camelizeWithLowerFirstLetter"></a>
+	<h3 class="subsubtitle method-title">camelizeWithLowerFirstLetter</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Converts an underscored separated string into a camelCasedString with the
+first letter lower case.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)camelizeWithLowerFirstLetter</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Converts an underscored separated string into a camelCasedString with the
+first letter lower case.</p>
+
+<p>Changes &lsquo;/&rsquo; to &lsquo;::&rsquo; to convert paths to namespaces.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+Inflections.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/capitalize" title="capitalize"></a>
+	<h3 class="subsubtitle method-title">capitalize</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Capitalizes the first letter and makes everything else lower case.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)capitalize</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Capitalizes the first letter and makes everything else lower case.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+Inflections.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/classify" title="classify"></a>
+	<h3 class="subsubtitle method-title">classify</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create a class name from a plural table name like Rails does for table names to models.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)classify</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Create a class name from a plural table name like Rails does for table names to models.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+Inflections.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/dasherize" title="dasherize"></a>
+	<h3 class="subsubtitle method-title">dasherize</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Replaces underscores with dashes in the string.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)dasherize</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Replaces underscores with dashes in the string.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+Inflections.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/demodulize" title="demodulize"></a>
+	<h3 class="subsubtitle method-title">demodulize</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Removes the module part from the expression in the string.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)demodulize</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Removes the module part from the expression in the string.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+Inflections.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/foreignKey" title="foreignKey"></a>
+	<h3 class="subsubtitle method-title">foreignKey</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a foreign key name from a class name.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)foreignKey</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Creates a foreign key name from a class name.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+Inflections.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/foreignKeyWithoutIdUnderscore" title="foreignKeyWithoutIdUnderscore"></a>
+	<h3 class="subsubtitle method-title">foreignKeyWithoutIdUnderscore</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a foreign key name from a class name without the <a href="#//api/name/underscore">underscore</a>
+separating the id part.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)foreignKeyWithoutIdUnderscore</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Creates a foreign key name from a class name without the <a href="#//api/name/underscore">underscore</a>
+separating the id part.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+Inflections.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/humanize" title="humanize"></a>
+	<h3 class="subsubtitle method-title">humanize</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Capitalizes the first word and turns underscores into spaces and strips a
+trailing &ldquo;_id&rdquo;, if any. Like +titleize+, this is meant for creating pretty output.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)humanize</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Capitalizes the first word and turns underscores into spaces and strips a
+trailing &ldquo;_id&rdquo;, if any. Like +titleize+, this is meant for creating pretty output.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+Inflections.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/ordinalize" title="ordinalize"></a>
+	<h3 class="subsubtitle method-title">ordinalize</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Turns a number into an ordinal string used to denote the position in an
+ordered sequence such as 1st, 2nd, 3rd, 4th.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)ordinalize</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Turns a number into an ordinal string used to denote the position in an
+ordered sequence such as 1st, 2nd, 3rd, 4th.</p>
+
+<p>TODO: This should be moved to NSNumber most likely</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+Inflections.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pluralize" title="pluralize"></a>
+	<h3 class="subsubtitle method-title">pluralize</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the plural form of the word in the string.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)pluralize</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the plural form of the word in the string.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+Inflections.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/singularize" title="singularize"></a>
+	<h3 class="subsubtitle method-title">singularize</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The reverse of +pluralize+, returns the singular form of a word in a string.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)singularize</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The reverse of +pluralize+, returns the singular form of a word in a string.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+Inflections.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/tableize" title="tableize"></a>
+	<h3 class="subsubtitle method-title">tableize</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create the name of a table like Rails does for models to table names. This method
+uses the +pluralize+ method on the last word in the string.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)tableize</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Create the name of a table like Rails does for models to table names. This method
+uses the +pluralize+ method on the last word in the string.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+Inflections.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/titleize" title="titleize"></a>
+	<h3 class="subsubtitle method-title">titleize</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Capitalizes all words that are not part of the nonTitlecasedWords.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)titleize</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Capitalizes all words that are not part of the nonTitlecasedWords.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+Inflections.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/underscore" title="underscore"></a>
+	<h3 class="subsubtitle method-title">underscore</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Makes an underscored, lowercase form from the expression in the string.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)underscore</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Makes an underscored, lowercase form from the expression in the string.</p>
+
+<p>Changes &lsquo;::&rsquo; to &lsquo;/&rsquo; to convert namespaces to paths.</p>
+
+<p>As a rule of thumb you can think of +underscore+ as the inverse of +camelize+,
+though there are cases where that does not hold:</p>
+
+<p>&ldquo;SSLError&rdquo;.<a href="#//api/name/underscore">underscore</a>.<a href="#//api/name/camelize">camelize</a> # => &ldquo;SslError&rdquo;</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+Inflections.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2011 DiscoKit. All rights reserved. (Last updated: 2011-08-24)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
+</html>

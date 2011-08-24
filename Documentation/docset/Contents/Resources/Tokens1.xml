@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSString(Inflections).html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSString</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>NSString+Inflections.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString/pluralize</TokenIdentifier>
+			<Abstract>Returns the plural form of the word in the string.</Abstract>
+			<DeclaredIn>NSString+Inflections.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)pluralize</Declaration>
+			
+			
+			<Anchor>//api/name/pluralize</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString/singularize</TokenIdentifier>
+			<Abstract>The reverse of +pluralize+, returns the singular form of a word in a string.</Abstract>
+			<DeclaredIn>NSString+Inflections.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)singularize</Declaration>
+			
+			
+			<Anchor>//api/name/singularize</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString/humanize</TokenIdentifier>
+			<Abstract>Capitalizes the first word and turns underscores into spaces and strips a
+trailing "_id", if any. Like +titleize+, this is meant for creating pretty output.</Abstract>
+			<DeclaredIn>NSString+Inflections.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)humanize</Declaration>
+			
+			
+			<Anchor>//api/name/humanize</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString/titleize</TokenIdentifier>
+			<Abstract>Capitalizes all words that are not part of the nonTitlecasedWords.</Abstract>
+			<DeclaredIn>NSString+Inflections.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)titleize</Declaration>
+			
+			
+			<Anchor>//api/name/titleize</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString/tableize</TokenIdentifier>
+			<Abstract>Create the name of a table like Rails does for models to table names. This method
+uses the +pluralize+ method on the last word in the string.</Abstract>
+			<DeclaredIn>NSString+Inflections.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)tableize</Declaration>
+			
+			
+			<Anchor>//api/name/tableize</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString/classify</TokenIdentifier>
+			<Abstract>Create a class name from a plural table name like Rails does for table names to models.</Abstract>
+			<DeclaredIn>NSString+Inflections.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)classify</Declaration>
+			
+			
+			<Anchor>//api/name/classify</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString/camelize</TokenIdentifier>
+			<Abstract>Converts an underscored separated string into a CamelCasedString.</Abstract>
+			<DeclaredIn>NSString+Inflections.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)camelize</Declaration>
+			
+			
+			<Anchor>//api/name/camelize</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString/camelizeWithLowerFirstLetter</TokenIdentifier>
+			<Abstract>Converts an underscored separated string into a camelCasedString with the
+first letter lower case.</Abstract>
+			<DeclaredIn>NSString+Inflections.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)camelizeWithLowerFirstLetter</Declaration>
+			
+			
+			<Anchor>//api/name/camelizeWithLowerFirstLetter</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString/underscore</TokenIdentifier>
+			<Abstract>Makes an underscored, lowercase form from the expression in the string.</Abstract>
+			<DeclaredIn>NSString+Inflections.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)underscore</Declaration>
+			
+			
+			<Anchor>//api/name/underscore</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString/dasherize</TokenIdentifier>
+			<Abstract>Replaces underscores with dashes in the string.</Abstract>
+			<DeclaredIn>NSString+Inflections.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)dasherize</Declaration>
+			
+			
+			<Anchor>//api/name/dasherize</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString/demodulize</TokenIdentifier>
+			<Abstract>Removes the module part from the expression in the string.</Abstract>
+			<DeclaredIn>NSString+Inflections.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)demodulize</Declaration>
+			
+			
+			<Anchor>//api/name/demodulize</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString/foreignKey</TokenIdentifier>
+			<Abstract>Creates a foreign key name from a class name.</Abstract>
+			<DeclaredIn>NSString+Inflections.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)foreignKey</Declaration>
+			
+			
+			<Anchor>//api/name/foreignKey</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString/foreignKeyWithoutIdUnderscore</TokenIdentifier>
+			<Abstract>Creates a foreign key name from a class name without the underscore
+separating the id part.</Abstract>
+			<DeclaredIn>NSString+Inflections.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)foreignKeyWithoutIdUnderscore</Declaration>
+			
+			
+			<Anchor>//api/name/foreignKeyWithoutIdUnderscore</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString/ordinalize</TokenIdentifier>
+			<Abstract>Turns a number into an ordinal string used to denote the position in an
+ordered sequence such as 1st, 2nd, 3rd, 4th.</Abstract>
+			<DeclaredIn>NSString+Inflections.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)ordinalize</Declaration>
+			
+			
+			<Anchor>//api/name/ordinalize</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString/capitalize</TokenIdentifier>
+			<Abstract>Capitalizes the first letter and makes everything else lower case.</Abstract>
+			<DeclaredIn>NSString+Inflections.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)capitalize</Declaration>
+			
+			
+			<Anchor>//api/name/capitalize</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

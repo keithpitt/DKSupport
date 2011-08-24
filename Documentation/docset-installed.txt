@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/keith/Library/Developer/Shared/Documentation/DocSets/com.discokit.dksupport.DKSupport.docset
+Time: 2011-08-24 07:44:33 +0000
