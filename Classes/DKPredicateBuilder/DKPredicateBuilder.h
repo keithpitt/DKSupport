@@ -10,8 +10,7 @@
 
 #import "DKPredicate.h"
 
-typedef void (^DKQueryPerformSuccess)(NSArray * records);
-typedef void (^DKQueryPerformError)(NSError * error);
+typedef void (^DKQueryFinishBlock)(NSArray * records, NSError * error);
 
 @interface DKPredicateBuilder : NSObject {
     
