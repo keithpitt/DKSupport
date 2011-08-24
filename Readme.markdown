@@ -72,7 +72,8 @@ see http://keithpitt.github.com/DKSupport/Classes/DKPredicateBuilder.html
 `DKSupport` some basic enumration functions similar to those found in
 Ruby (http://www.ruby-doc.org/core/classes/Enumerable.html)
 
-`collectWithKey` and `collectWithBlock` will create an `NSArray` of all
+`- (NSArray *)collectWithBlock:(NSArrayCallbackBlock)block`
+and `- (NSArray *)collectWithKey:(NSString *)key` will create an `NSArray` of all
 the objects returned by the block. This is similar to the `map` method
 in Ruby.
 
@@ -90,7 +91,8 @@ in Ruby.
         return [object valueForKey:@"name"];
     }];
 
-`findWithBlock` will return the first result where the block returns `TRUE`
+`- (NSObject *)findWithBlock:(NSArrayFindCallbackBlock)block` will return the
+first result where the block returns `TRUE`
 
     NSArray * array = [NSArray arrayWithObjects:
                      [NSDictionary dictionaryWithObject:@"foo" forKey:@"bar"],
@@ -101,7 +103,8 @@ in Ruby.
         return [[object valueForKey:@"bar"] isEqualToString:@"not foo"];
     }];
 
-`selectWithBlock` will return all the results that return `TRUE`
+`- (NSArray *)selectWithBlock:(NSArraySelectCallbackBlock)block` will return all
+the results that return `TRUE`
 
     NSArray * array = [NSArray arrayWithObjects:
                         [NSDictionary dictionaryWithObject:@"foo" forKey:@"bar"],
@@ -118,7 +121,8 @@ in Ruby.
 #### Conversions
 
 `- (NSString *)format:(NSString *)format` provides a quick way of formatting an
-`NSDate`. For possible formats, see http://unicode.org/reports/tr35/tr35-10.html#Date_Format_Patterns
+`NSDate`. For possible formats, see the following
+http://unicode.org/reports/tr35/tr35-10.html#Date_Format_Patterns
 
     NSDate * date = [NSDate date]
 
@@ -154,7 +158,7 @@ is on the same day
 
 #### Initializers
 
-`+ (NSDate *)dateFromString:(NSString *)string;` will create an `NSDate` object using the
+`+ (NSDate *)dateFromString:(NSString *)string;` will create an instance of `NSDate` using the
 `ISO8601DateFormatter`
 
     NSString * someDate = @"05/12/2011 12:52:13 UTC";
