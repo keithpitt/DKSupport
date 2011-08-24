@@ -72,7 +72,7 @@ see http://keithpitt.github.com/DKSupport/Classes/DKPredicateBuilder.html
 `DKSupport` some basic enumration functions similar to those found in
 Ruby (http://www.ruby-doc.org/core/classes/Enumerable.html)
 
-`collectWithKey` and `collectWithBlock` will create an NSArray of all
+`collectWithKey` and `collectWithBlock` will create an `NSArray` of all
 the objects returned by the block. This is similar to the `map` method
 in Ruby.
 
@@ -90,7 +90,7 @@ in Ruby.
         return [object valueForKey:@"name"];
     }];
 
-`findWithBlock` will return the first result where the block returns TRUE
+`findWithBlock` will return the first result where the block returns `TRUE`
 
     NSArray * array = [NSArray arrayWithObjects:
                      [NSDictionary dictionaryWithObject:@"foo" forKey:@"bar"],
@@ -101,7 +101,7 @@ in Ruby.
         return [[object valueForKey:@"bar"] isEqualToString:@"not foo"];
     }];
 
-`selectWithBlock` will return all the results that return TRUE
+`selectWithBlock` will return all the results that return `TRUE`
 
     NSArray * array = [NSArray arrayWithObjects:
                         [NSDictionary dictionaryWithObject:@"foo" forKey:@"bar"],
