@@ -44,6 +44,88 @@ and [The Frontier Group](http://www.thefrontiergroup.com.au)
 
 For more documentation, visit http://keithpitt.github.com/DKSupport
 
+### DKPredicateBuilder
+
+The predicate builder is an easy way to generate `NSPredicate` objects for use
+with your Core Data and NSArray queries. For the full `DKPredicateBuilder` API,
+see http://keithpitt.github.com/DKSupport/Classes/DKPredicateBuilder.html
+
+    #import "DKPredicateBuilder.h"
+
+    DKPredicateBuilder * predicateBuilder = [[DKPredicateBuilder alloc] init];
+
+    [predicateBuilder where:@"name" equals:@"keith"];
+    [predicateBuilder where:@"count" greaterThan:[NSNumber numberWithInt:12]];
+    [predicateBuilder where:@"username" isNull:NO];
+
+    NSLog(@"%@", [compoundPredicate predicateFormat]);
+    // "name == \"keith\" AND count > 12 AND username != nil"
+
+    [predicateBuilder release];
+
+### NSArray
+
+#### Enumurables
+
+`DKSupport` some basic enumration functions similar to those found in
+Ruby (http://www.ruby-doc.org/core/classes/Enumerable.html)
+
+    #import "NSArray+Enumurable.h"
+
+    NSArray * array = [NSArray arrayWithObjects:
+                       [NSDictionary dictionaryWithObject:@"Keith" forKey:@"name"],
+                       [NSDictionary dictionaryWithObject:@"Jordan" forKey:@"name"],
+                       nil];
+
+    // The following examples will both return an NSArray object with
+    // "Keith" and "Jordan" as elements
+
+    NSArray * collected1 = [array collectWithKey:@"name"];
+
+    NSArray * collected2 = [array collectWithBlock:^(NSObject * object) {
+        return [object valueForKey:@"name"];
+    }];
+
+    // findWithBlock will return the first result where the block
+    // returns TRUE
+
+    NSArray * array = [NSArray arrayWithObjects:
+                     [NSDictionary dictionaryWithObject:@"foo" forKey:@"bar"],
+                     [NSDictionary dictionaryWithObject:@"not foo" forKey:@"bar"]
+                     nil];
+
+    NSDictionary * found = array findWithBlock:^(NSObject * object) {
+        return [[object valueForKey:@"bar"] isEqualToString:@"not foo"];
+    }];
+
+    // selectWithBlock will return all the results that return TRUE
+
+    NSArray * array = [NSArray arrayWithObjects:
+                        [NSDictionary dictionaryWithObject:@"foo" forKey:@"bar"],
+                        [NSDictionary dictionaryWithObject:@"foo" forKey:@"bar"],
+                        [NSDictionary dictionaryWithObject:@"not foo" forKey:@"bar"],
+                        nil];
+
+    NSArray * collected = [array selectWithBlock:^(NSObject * object) {
+      return [[object valueForKey:@"bar"] isEqualToString:@"foo"];
+    }];
+
+### NSDate
+
+### NSMutableArray
+
+### NSNumber
+
+### NSObject
+
+### NSString
+
+### UIAlertView
+
+### UIViewController
+
+### DKLogger
+
 ## Running Specs
 
 To run the specs, open [DKSupport.xcodeproj](https://github.com/keithpitt/DKSupport/tree/master/DKSupport.xcodeproj) project, and run the `Specs` target.
@@ -59,6 +141,7 @@ To build the documentation, just run `rake` in the root of the project. You will
 * https://github.com/pivotal/cedar
 * http://boredzo.org/iso8601unparser/
 * http://regexkit.sourceforge.net/#RegexKitLite
+* https://github.com/fpillet/NSLogger
 
 ## Note on Patches/Pull Requests
 
