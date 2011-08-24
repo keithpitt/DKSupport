@@ -69,6 +69,7 @@ To build the documentation, just run `rake` in the root of the project. You will
 ## Contributers
 
 * [Keith Pitt](http://www.keithpitt.com)
+* [Jordan Maguire](https://github.com/jordanmaguire)
 * [The Frontier Group](http://www.thefrontiergroup.com.au)
 * [Mostly Disco](http://www.mostlydisco.com)
 
