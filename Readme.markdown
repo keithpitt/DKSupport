@@ -40,7 +40,7 @@ and [The Frontier Group](http://www.thefrontiergroup.com.au)
 
 7. Add `-all_load -ObjC` to the `Other Linker Flags` build setting
 
-8. Add `#import "DKSupport.h" in your `Prefix.pch` file
+8. Add `#import "DKSupport.h"` in your `Prefix.pch` file
 
 ## Usage
 
