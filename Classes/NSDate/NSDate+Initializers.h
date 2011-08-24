@@ -10,6 +10,6 @@
 
 @interface NSDate (Initializers)
 
-+ (NSDate*)dateFromString:(NSString *)string;
++ (NSDate *)dateFromString:(NSString *)string;
 
 @end

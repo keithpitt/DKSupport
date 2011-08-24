@@ -10,6 +10,6 @@
 
 @interface NSString (Initializers)
 
-+ (NSString*)stringWithRandom:(int)len;
++ (NSString *)stringWithRandom:(int)len;
 
 @end
