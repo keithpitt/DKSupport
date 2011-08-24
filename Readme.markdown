@@ -69,7 +69,7 @@ see http://keithpitt.github.com/DKSupport/Classes/DKPredicateBuilder.html
 
 #### Enumurables
 
-`DKSupport` some basic enumration functions similar to those found in
+`DKSupport` some basic enumeration functions similar to those found in
 Ruby (http://www.ruby-doc.org/core/classes/Enumerable.html)
 
 `- (NSArray *)collectWithBlock:(NSArrayCallbackBlock)block`
@@ -121,8 +121,8 @@ the results that return `TRUE`
 #### Conversions
 
 `- (NSString *)format:(NSString *)format` provides a quick way of formatting an
-`NSDate`. For possible formats, see the following
-http://unicode.org/reports/tr35/tr35-10.html#Date_Format_Patterns
+`NSDate`. For possible formats, see the following http://unicode.org/reports/tr35/tr35-10.html#Date_Format_Patterns
+and http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/DataFormatting/Articles/dfDateFormatting10_4.html
 
     NSDate * date = [NSDate date]
 
