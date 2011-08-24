@@ -40,6 +40,8 @@ and [The Frontier Group](http://www.thefrontiergroup.com.au)
 
 7. Add `-all_load -ObjC` to the `Other Linker Flags` build setting
 
+8. Add `#import "DKSupport.h" in your `Prefix.pch` file
+
 ## Usage
 
 For more documentation, visit http://keithpitt.github.com/DKSupport
@@ -70,7 +72,9 @@ see http://keithpitt.github.com/DKSupport/Classes/DKPredicateBuilder.html
 `DKSupport` some basic enumration functions similar to those found in
 Ruby (http://www.ruby-doc.org/core/classes/Enumerable.html)
 
-    #import "NSArray+Enumurable.h"
+`collectWithKey` and `collectWithBlock` will create an NSArray of all
+the objects returned by the block. This is similar to the `map` method
+in Ruby.
 
     NSArray * array = [NSArray arrayWithObjects:
                        [NSDictionary dictionaryWithObject:@"Keith" forKey:@"name"],
@@ -86,8 +90,7 @@ Ruby (http://www.ruby-doc.org/core/classes/Enumerable.html)
         return [object valueForKey:@"name"];
     }];
 
-    // findWithBlock will return the first result where the block
-    // returns TRUE
+`findWithBlock` will return the first result where the block returns TRUE
 
     NSArray * array = [NSArray arrayWithObjects:
                      [NSDictionary dictionaryWithObject:@"foo" forKey:@"bar"],
@@ -98,7 +101,7 @@ Ruby (http://www.ruby-doc.org/core/classes/Enumerable.html)
         return [[object valueForKey:@"bar"] isEqualToString:@"not foo"];
     }];
 
-    // selectWithBlock will return all the results that return TRUE
+`selectWithBlock` will return all the results that return TRUE
 
     NSArray * array = [NSArray arrayWithObjects:
                         [NSDictionary dictionaryWithObject:@"foo" forKey:@"bar"],
