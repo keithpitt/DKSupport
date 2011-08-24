@@ -8,17 +8,16 @@ and [The Frontier Group](http://www.thefrontiergroup.com.au)
 
 ## Installation
 
-**Note: These installation instructions are for XCode 4. XCode 3
-installations instructions do not exist at the moment.**
+**Note: These installation instructions are for XCode 4**
 
-1. Checkout the code into your project root
+1. Checkout the code into your project
 
         mkdir -p External/DKSupport
         curl -L http://github.com/keithpitt/DKSupport/tarball/master | tar xz --strip 1 -C External/DKSupport
 
-   Or if you prefer to add it as a git submodule
+    Or if you prefer to add it as a git submodule
 
-       git submodule add git://github.com/keithpitt/DKSupport.git External/DKSupport
+        git submodule add git://github.com/keithpitt/DKSupport.git External/DKSupport
 
 2. Open your XCode project, and create an `External` group
 
@@ -33,11 +32,11 @@ installations instructions do not exist at the moment.**
 6. Add the following frameworks to your project (if they are not there
    already)
 
-       libicucore.dylib
-       SystemConfiguration.framework
-       CFNetwork.framework
-       Foundation.framework
-       UIKit.framework
+        libicucore.dylib
+        SystemConfiguration.framework
+        CFNetwork.framework
+        Foundation.framework
+        UIKit.framework
 
 7. Add `-all_load -ObjC` to the `Other Linker Flags` build setting
 
