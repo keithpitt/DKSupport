@@ -12,12 +12,12 @@ and [The Frontier Group](http://www.thefrontiergroup.com.au)
 
 1. Checkout the code into your project
 
-        mkdir -p External/DKSupport
-        curl -L http://github.com/keithpitt/DKSupport/tarball/master | tar xz --strip 1 -C External/DKSupport
+        $ mkdir -p External/DKSupport
+        $ curl -L http://github.com/keithpitt/DKSupport/tarball/master | tar xz --strip 1 -C External/DKSupport
 
     Or if you prefer to add it as a git submodule
 
-        git submodule add git://github.com/keithpitt/DKSupport.git External/DKSupport
+        $ git submodule add git://github.com/keithpitt/DKSupport.git External/DKSupport
 
 2. Open your XCode project, and create an `External` group
 
