@@ -13,8 +13,8 @@ installations instructions do not exist at the moment.**
 
 1. Checkout the code into your project root
 
-       mkdir -p External/DKSupport
-       curl -L http://github.com/keithpitt/DKSupport/tarball/master | tar xz --strip 1 -C External/DKSupport
+        mkdir -p External/DKSupport
+        curl -L http://github.com/keithpitt/DKSupport/tarball/master | tar xz --strip 1 -C External/DKSupport
 
    Or if you prefer to add it as a git submodule
 
