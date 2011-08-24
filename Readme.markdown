@@ -72,27 +72,37 @@ see http://keithpitt.github.com/DKSupport/Classes/DKPredicateBuilder.html
 `DKSupport` some basic enumeration functions similar to those found in
 Ruby (http://www.ruby-doc.org/core/classes/Enumerable.html)
 
-`- (NSArray *)collectWithBlock:(NSArrayCallbackBlock)block`
-and `- (NSArray *)collectWithKey:(NSString *)key` will create an `NSArray` of all
-the objects returned by the block. This is similar to the `map` method
-in Ruby.
+`- (NSArray *)collectWithBlock:(NSArrayCallbackBlock)block;`
+
+Create an instance of `NSArray` of all the objects returned by the block.
+This is similar to the `map` method in Ruby.
 
     NSArray * array = [NSArray arrayWithObjects:
                        [NSDictionary dictionaryWithObject:@"Keith" forKey:@"name"],
                        [NSDictionary dictionaryWithObject:@"Jordan" forKey:@"name"],
                        nil];
 
-    // The following examples will both return an NSArray object with
-    // "Keith" and "Jordan" as elements
-
-    NSArray * collected1 = [array collectWithKey:@"name"];
-
-    NSArray * collected2 = [array collectWithBlock:^(NSObject * object) {
+    // Returns "Keith" and "Jordan"
+    NSArray * collected = [array collectWithBlock:^(NSObject * object) {
         return [object valueForKey:@"name"];
     }];
 
-`- (NSObject *)findWithBlock:(NSArrayFindCallbackBlock)block` will return the
-first result where the block returns `TRUE`
+`- (NSArray *)collectWithKey:(NSString *)key;`
+
+Will call `objectForKey` on all the elements in the array with the key
+provided.
+
+    NSArray * array = [NSArray arrayWithObjects:
+                       [NSDictionary dictionaryWithObject:@"Keith" forKey:@"name"],
+                       [NSDictionary dictionaryWithObject:@"Jordan" forKey:@"name"],
+                       nil];
+
+    // Returns "Keith" and "Jordan"
+    NSArray * collected = [array collectWithKey:@"name"];
+
+`- (NSObject *)findWithBlock:(NSArrayFindCallbackBlock)block;`
+
+Returns the first result where the block returns `TRUE`
 
     NSArray * array = [NSArray arrayWithObjects:
                      [NSDictionary dictionaryWithObject:@"foo" forKey:@"bar"],
@@ -103,8 +113,9 @@ first result where the block returns `TRUE`
         return [[object valueForKey:@"bar"] isEqualToString:@"not foo"];
     }];
 
-`- (NSArray *)selectWithBlock:(NSArraySelectCallbackBlock)block` will return all
-the results that return `TRUE`
+`- (NSArray *)selectWithBlock:(NSArraySelectCallbackBlock)block;`
+
+Returns all the elements in the array where the block returns `TRUE`
 
     NSArray * array = [NSArray arrayWithObjects:
                         [NSDictionary dictionaryWithObject:@"foo" forKey:@"bar"],
@@ -120,46 +131,55 @@ the results that return `TRUE`
 
 #### Conversions
 
-`- (NSString *)format:(NSString *)format` provides a quick way of formatting an
-`NSDate`. For possible formats, see the following http://unicode.org/reports/tr35/tr35-10.html#Date_Format_Patterns
-and http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/DataFormatting/Articles/dfDateFormatting10_4.html
+`- (NSString *)format:(NSString *)format;`
+
+Provides a quick way of formatting an `NSDate`. For possible formats, see the
+following http://unicode.org/reports/tr35/tr35-10.html#Date_Format_Patterns
 
     NSDate * date = [NSDate date]
 
     NSLog(@"%@", [date format:@"yyyy-MM-dd"]);
 
-`- (NSDate *)utc` will return the date converted to UTC
+`- (NSDate *)utc;`
+
+Returns the date converted to UTC
 
     // The current time in UTC
     NSDate * utcDate = [[NSDate date] utc];
 
-`- (NSDate *)beginingOfDay` will return an `NSDate` with the time portion set to the
-beginning of the day
+`- (NSDate *)beginingOfDay;`
+
+Return an `NSDate` with the time portion set to the beginning of the day
 
     // Returns the begining of today
     NSDate * beginingOfDay = [[NSDate date] beginingOfDay];
 
-`- (NSDate *)endOfDay` will return an `NSDate` with the time portion set to the
-beginning of the day
+`- (NSDate *)endOfDay;`
+
+Return an `NSDate` with the time portion set to the beginning of the day
 
     // Returns the end of today
     NSDate * endOfDay = [[NSDate date] endOfDay];
 
-`- (BOOL)isSameDayAs:(NSDate*)date;` will return `TRUE` if the provided `NSDate`
-is on the same day
+`- (BOOL)isSameDayAs:(NSDate*)date;`
+
+Will return `TRUE` if the provided `NSDate` is on the same day
 
     // Will return TRUE
     [[NSDate date] isSameDayAs:[NSDate date]];
 
-`- (BOOL)isToday` will return `TRUE` if the date is today
+`- (BOOL)isToday;`
+
+Will return `TRUE` if the date provided is on the same day as
 
     // Will return TRUE
     [[NSDate date] isToday];
 
 #### Initializers
 
-`+ (NSDate *)dateFromString:(NSString *)string;` will create an instance of `NSDate` using the
-`ISO8601DateFormatter`
+`+ (NSDate *)dateFromString:(NSString *)string;`
+
+Create an instance of `NSDate` using the `ISO8601DateFormatter`
 
     NSDate * date = [NSDate dateFromString:@"05/12/2011 12:52:13 UTC"];
 
@@ -167,8 +187,9 @@ is on the same day
 
 #### Reverse
 
-`- (void)reverse` will modify the current `NSMutableArray` and reverse
-the order of the elements.
+`- (void)reverse;`
+
+Modifies the current `NSMutableArray` and reverse the order of the elements.
 
     NSMutableArray * array = [NSMutableArray arrayWithObjects:@"a", @"b", @"c"];
 
@@ -178,8 +199,9 @@ the order of the elements.
 
 #### Initializers
 
-`+ (id)numberWithString:(NSString *)string` will return an autoreleased
-`NSNumber` from the string provided.
+`+ (id)numberWithString:(NSString *)string`
+
+Returns an autoreleased `NSNumber` from the string provided.
 
     NSNumber * number = [NSNumber numberWithString:@"124.6345"];
 
@@ -187,10 +209,11 @@ the order of the elements.
 
 #### Blocks
 
-`- (void)performBlock:(void (^)(void))block afterDelay:(NSTimeInterval)delay` provides an easy way to execute
-a block after a period. Because this method is on `NSObject` the object
-your executing this on must have extended from `NSObject` (which is most
-objects in Cocoa).
+`- (void)performBlock:(void (^)(void))block afterDelay:(NSTimeInterval)delay`
+
+Provides an easy way to execute a block after a period. Because this method is
+on `NSObject` the object your executing this on must have extended from `NSObject`
+(which is most objects in Cocoa).
 
     [self performBlock:^{
         NSLog(@"More energy...");
@@ -200,7 +223,9 @@ objects in Cocoa).
 
 #### Hash
 
-`- (NSString *)md5` will return an MD5 hash of the string
+`- (NSString *)md5`
+
+Returns an MD5 hash of the string
 
     [@"Hey this is Arnold..." md5];
 
@@ -222,7 +247,7 @@ The reverse of +pluralize+, returns the singular form of a word in a string.
 `- (NSString *)humanize;`
 
 Capitalizes the first word and turns underscores into spaces and strips a trailing "_id", if any. Like +titleize+, this is meant for creating pretty output.
- 
+
 `- (NSString *)titleize;`
 
 Capitalizes all words that are not part of the nonTitlecasedWords.
