@@ -70,59 +70,158 @@ You can also chain together predicates like this
 
 #### API
 
-`- (id)only:(NSString *)column;`
-
 `- (id)where:(DKPredicate *)predicate;`
 
-`- (id)where:(NSString *)key isFalse:(BOOL)value;`
+Add a custom NSPredicate to the builder
 
 `- (id)where:(NSString *)key isTrue:(BOOL)value;`
 
+A predicate to check whether or not the key is `TRUE` or `FALSE`
+
+    // All records where 'active' is TRUE
+    [predicateBuilder where:@"active" isTrue:YES]
+
+    // All records where 'active' is FALSE
+    [predicateBuilder where:@"active" isTrue:NO]
+
+`- (id)where:(NSString *)key isFalse:(BOOL)value;`
+
+The compliment of `isTrue`
+
+    // All records where 'active' is FALSE
+    [predicateBuilder where:@"active" isFalse:YES]
+
+    // All records where 'active' is TRUE
+    [predicateBuilder where:@"active" isFalse:NO]
+
 `- (id)where:(NSString *)key isNull:(BOOL)value;`
+
+The key has a `NULL` value
+
+    [predicateBuilder where:@"username" isNull:YES];
 
 `- (id)where:(NSString *)key isNotNull:(BOOL)value;`
 
+The key doesn't have a `NULL` value
+
+    [predicateBuilder where:@"username" isNotNull:YES];
+
 `- (id)where:(NSString *)key equals:(id)value;`
+
+The key equals the value
+
+    [predicateBuilder where:@"username" equals:@"keithpitt"];
 
 `- (id)where:(NSString *)key doesntEqual:(id)value;`
 
+The key doesn't equal the value
+
+    [predicateBuilder where:@"username" doesntEqual:@"jordanmaguire"];
+
 `- (id)where:(NSString *)key isIn:(NSArray *)values;`
+
+The key is in one of the values
+
+    [predicateBuilder where:@"username" equals:[NSArray arrayWithObjects:@"keithpitt", @"jordanmaguire", nil]];
 
 `- (id)where:(NSString *)key isNotIn:(NSArray *)values;`
 
+They key is not in one of the values
+
+    [predicateBuilder where:@"username" equals:[NSArray arrayWithObjects:@"stevejobs", @"waz", nil]];
+
 `- (id)where:(NSString *)key startsWith:(NSString *)value;`
+
+The key starts with the value
+
+    [predicateBuilder where:@"username" startsWith:@"kei"];
 
 `- (id)where:(NSString *)key doesntStartWith:(NSString *)value;`
 
+The key doesn't start with the value
+
+    [predicateBuilder where:@"username" startsWith:@"jor"];
+
 `- (id)where:(NSString *)key endsWith:(NSString *)value;`
+
+The key ends with the value
+
+    [predicateBuilder where:@"username" endsWith:@"pitt"];
 
 `- (id)where:(NSString *)key doesntEndWith:(NSString *)value;`
 
+The key doens't end with the value
+
+    [predicateBuilder where:@"username" endsWith:@"maguire"];
+
 `- (id)where:(NSString *)key contains:(NSString *)value;`
+
+The key `CONTAINS` the value
+
+    [predicateBuilder where:@"username" endsWith:@"eith"];
 
 `- (id)where:(NSString *)key like:(NSString *)value;`
 
+The key is `LIKE` the value
+
+    [predicateBuilder where:@"username" like:@"keith"];
+
 `- (id)where:(NSString *)key greaterThan:(id)value;`
+
+The key is more than the value
+
+    [predicateBuilder where:@"views" greaterThan:[NSNumber numberWithInt:12]];
 
 `- (id)where:(NSString *)key greaterThanOrEqualTo:(id)value;`
 
+The key is more than or equal to the value
+
+    [predicateBuilder where:@"views" greaterThanOrEqualTo:[NSNumber numberWithInt:12]];
+
 `- (id)where:(NSString *)key lessThan:(id)value;`
+
+The key is less than the value
+
+    [predicateBuilder where:@"views" lessThan:[NSNumber numberWithInt:12]];
 
 `- (id)where:(NSString *)key lessThanOrEqualTo:(id)value;`
 
+The key is less than or equal to the value
+
+    [predicateBuilder where:@"views" lessThanOrEqualTo:[NSNumber numberWithInt:12]];
+
 `- (id)where:(NSString *)key between:(id)first andThis:(id)second;`
+
+The key is between the first value and the second value
+
+    [predicateBuilder where:@"createdAt" between:[[NSDate date] beginingOfDay] andThis:[[NSDate date] endOfDay]];
 
 `- (id)orderBy:(NSString *)column ascending:(BOOL)ascending;`
 
+Creates an NSSortDescriptor and add it to the `sorters` property on the
+`DKPropertyBuilder`
+
+    [predicateBuilder orderBy:@"views" ascending:YES];
+
 `- (id)limit:(int)value;`
+
+Specify a limit of the query
+
+    [predicateBuilder limit:12];
 
 `- (id)offset:(int)value;`
 
-`- (id)batchSize:(int)value;`
+Specify an offset for the query
+
+    [predicateBuilder offset:63];
 
 `- (NSCompoundPredicate *)compoundPredicate;`
 
+Returns an `NSCompoundPredicate` with all the predicates defined
+
 `- (NSString *)compoundPredicateKey;`
+
+Returns an MD5 hash of the NSCompoundPredicate. This is usefull for cache keys.
 
 ### NSArray
 
