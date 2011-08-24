@@ -298,8 +298,9 @@ Capitalizes the first letter and makes everything else lower case.
 
 #### Initializers
 
-`+ (NSString *)stringWithRandom:(int)len` will generate a string with
-random characters [a-z0-9] with the given length
+`+ (NSString *)stringWithRandom:(int)len`
+
+Generates a string with random characters [a-z0-9] with the given length
 
     NSString * random = [NSString stringWithRandom:12];
 
@@ -307,11 +308,35 @@ random characters [a-z0-9] with the given length
 
 `+ (UIAlertView *)alertWithError:(NSError*)error title:(NSString*)title;`
 
+A quick way to show a `UIAlertView` from an `NSError`
+
+    // Some operation that returns an NSError
+    // ...
+
+    [UIAlertView alertWithError:error title:@"Something Broke..."];
+
 `+ (UIAlertView *)alertWithMessage:(NSString*)message title:(NSString*)title;`
+
+A quick way of showing a `UIAlertView` with a message and a title
+
+    [UIAlertView alertWithMessage:@"Something happened" title:@"Notice"];
 
 `+ (UIAlertView *)alertWithMessage:(NSString*)message title:(NSString*)title cancelButtonTitle:(NSString *)cancelButtonTitle;`
 
-`+ (UIAlertView *)alertWithMessage:(NSString*)message title:(NSString*)title cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtons dismiss:(UIAlertViewDismissBlock)dismissBlock cancel:(UIAlertViewCancelBlock)cancelBlock;`
+    [UIAlertView alertWithMessage:@"Something happened: title:@"Notice" cancelButtonTitle:@"Go Away!"];
+
+`DKSupport` also provides a convenient way to generate a UIAlertView and
+handle responses via a block syntax
+
+    [UIAlertView alertWithMessage:@"Are you sure?"
+                            title:@"Save Document"
+                cancelButtonTitle:@"No"
+                otherButtonTitles:[NSArray arrayWithObjects:@"Yes", @"Yes and quit", nil]
+                          dismiss:^(int buttonIndex) {
+                              NSLog(@"User selected %i", buttonIndex);
+                          } cancel:cancel^{
+                              NSLog(@"User selected no");
+                          }];
 
 ### UIViewController
 
