@@ -12,18 +12,14 @@
 
 SPEC_BEGIN(NSStringHashSpec)
 
-describe(@"NSString+Hash", ^{
+context(@"-md5", ^{
     
-    context(@"-md5", ^{
+    it(@"return an MD5 hash", ^{
+        NSString * md5 = [@"Something hashy" md5];
         
-        it(@"return an MD5 hash", ^{
-            NSString * md5 = [@"Something hashy" md5];
-            
-            expect(md5).toEqual(@"34038D1E3350650A148C0DFB0AC7A72D");
-        });
-                
+        expect(md5).toEqual(@"34038D1E3350650A148C0DFB0AC7A72D");
     });
-    
+            
 });
 
 SPEC_END

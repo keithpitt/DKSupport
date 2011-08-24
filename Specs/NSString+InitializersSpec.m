@@ -12,31 +12,27 @@
 
 SPEC_BEGIN(NSStringInitializersSpec)
 
-describe(@"NSString+Initializers", ^{
+context(@"NSString#stringWithRandom", ^{
     
-    context(@"NSString#stringWithRandom", ^{
+    it(@"should return a string", ^{
+        NSString *result = [NSString stringWithRandom:10];
         
-        it(@"should return a string", ^{
-            NSString *result = [NSString stringWithRandom:10];
-            
-            expect(result).toBeKindOf([NSString class]);
-        });
-    
-        it(@"should generate a random string", ^{
-            NSString *string1 = [NSString stringWithRandom:10];
-            NSString *string2 = [NSString stringWithRandom:10];
-            
-            expect(string1).Not.toEqual(string2);
-        });
-        
-        it(@"should return an empty string if passed 0 as a length", ^{
-            NSString *result = [NSString stringWithRandom:0];
-            
-            expect(result).toEqual(@"");
-        });
-        
+        expect(result).toBeKindOf([NSString class]);
     });
 
+    it(@"should generate a random string", ^{
+        NSString *string1 = [NSString stringWithRandom:10];
+        NSString *string2 = [NSString stringWithRandom:10];
+        
+        expect(string1).Not.toEqual(string2);
+    });
+    
+    it(@"should return an empty string if passed 0 as a length", ^{
+        NSString *result = [NSString stringWithRandom:0];
+        
+        expect(result).toEqual(@"");
+    });
+    
 });
 
 SPEC_END

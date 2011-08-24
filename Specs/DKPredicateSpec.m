@@ -11,45 +11,41 @@
 #import "DKPredicate.h"
 
 SPEC_BEGIN(DKPredicateSpec)
-
-describe(@"DKPredicate", ^{
     
-    context(@"initWithPredicate:predicateType:info:", ^{
-       
-        it(@"should set the correct properties", ^{
-            
-            NSPredicate * actualPredicate = [NSPredicate predicateWithFormat:@"%K = %@", @"name", @"keith"];
-            NSDictionary * info = [NSDictionary dictionaryWithObjectsAndKeys:
-                                   @"name", @"column",
-                                   @"keith", @"value",
-                                   nil];
-            
-            DKPredicate * predicate = [DKPredicate withPredicate:actualPredicate
-                                                   predicateType:DKPredicateTypeEquals
-                                                            info:info];
-            
-            expect(predicate.predicate).toEqual(actualPredicate);
-            expect(predicate.info).toEqual(info);
-            expect(predicate.predicateType).toEqual(DKPredicateTypeEquals);
-            
-        });
+context(@"initWithPredicate:predicateType:info:", ^{
+   
+    it(@"should set the correct properties", ^{
+        
+        NSPredicate * actualPredicate = [NSPredicate predicateWithFormat:@"%K = %@", @"name", @"keith"];
+        NSDictionary * info = [NSDictionary dictionaryWithObjectsAndKeys:
+                               @"name", @"column",
+                               @"keith", @"value",
+                               nil];
+        
+        DKPredicate * predicate = [DKPredicate withPredicate:actualPredicate
+                                               predicateType:DKPredicateTypeEquals
+                                                        info:info];
+        
+        expect(predicate.predicate).toEqual(actualPredicate);
+        expect(predicate.info).toEqual(info);
+        expect(predicate.predicateType).toEqual(DKPredicateTypeEquals);
         
     });
     
-    context(@"-predicateFormat", ^{
+});
+
+context(@"-predicateFormat", ^{
+    
+    it(@"should return the correct format for DKPredicateTypeEquals", ^{
         
-        it(@"should return the correct format for DKPredicateTypeEquals", ^{
-            
-            DKPredicate * predicate = [DKPredicate withPredicate:[NSPredicate predicateWithFormat:@"%K = %@", @"name", @"keith"]
-                                                   predicateType:DKPredicateTypeEquals
-                                                            info:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                                  @"name", @"column",
-                                                                  @"keith", @"value",
-                                                                  nil]];
-            
-            expect([predicate predicateFormat]).toEqual(@"name == \"keith\"");
-            
-        });
+        DKPredicate * predicate = [DKPredicate withPredicate:[NSPredicate predicateWithFormat:@"%K = %@", @"name", @"keith"]
+                                               predicateType:DKPredicateTypeEquals
+                                                        info:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                              @"name", @"column",
+                                                              @"keith", @"value",
+                                                              nil]];
+        
+        expect([predicate predicateFormat]).toEqual(@"name == \"keith\"");
         
     });
     

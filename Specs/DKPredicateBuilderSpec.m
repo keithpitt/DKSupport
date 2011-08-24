@@ -12,53 +12,49 @@
 
 SPEC_BEGIN(DKPredicateBuilderSpec)
 
-describe(@"DKPredicateBuilderSpec", ^{
+__block DKPredicateBuilder * predicateBuilder;
+__block NSCompoundPredicate * compoundPredicate;
+
+beforeEach(^{
     
-    __block DKPredicateBuilder * predicateBuilder;
-    __block NSCompoundPredicate * compoundPredicate;
+    predicateBuilder = [[DKPredicateBuilder alloc] init];
     
-    beforeEach(^{
+    [predicateBuilder where:@"name" equals:@"keith"];
+    [predicateBuilder where:@"count" greaterThan:[NSNumber numberWithInt:12]];
+    [predicateBuilder where:@"username" isNull:NO];
+    
+    compoundPredicate = [predicateBuilder compoundPredicate];
+    
+});
+
+context(@"-compoundPredicate", ^{
+    
+    it(@"should construct an NSCompoundPredicate", ^{
         
-        predicateBuilder = [[DKPredicateBuilder alloc] init];
-        
-        [predicateBuilder where:@"name" equals:@"keith"];
-        [predicateBuilder where:@"count" greaterThan:[NSNumber numberWithInt:12]];
-        [predicateBuilder where:@"username" isNull:NO];
-        
-        compoundPredicate = [predicateBuilder compoundPredicate];
+        expect([compoundPredicate predicateFormat]).toEqual(@"name == \"keith\" AND count > 12 AND username != nil");
         
     });
     
-    context(@"-compoundPredicate", ^{
+});
+
+context(@"-compoundPredicateKey", ^{
+    
+    it(@"should return a unique key for the predicate", ^{
         
-        it(@"should construct an NSCompoundPredicate", ^{
-            
-            expect([compoundPredicate predicateFormat]).toEqual(@"name == \"keith\" AND count > 12 AND username != nil");
-            
-        });
+        expect([predicateBuilder compoundPredicateKey]).toEqual(@"06B2D8BB9C2B5EE01FA4D70C3D06F8E0");
         
     });
     
-    context(@"-compoundPredicateKey", ^{
-        
-        it(@"should return a unique key for the predicate", ^{
-            
-            expect([predicateBuilder compoundPredicateKey]).toEqual(@"06B2D8BB9C2B5EE01FA4D70C3D06F8E0");
-            
-        });
-        
-    });
+});
+
+context(@"lastPerformDate", ^{
     
-    context(@"lastPerformDate", ^{
+    it(@"should return the last perform date", ^{
         
-        it(@"should return the last perform date", ^{
-            
-            NSDate * now = [NSDate date];
-            [predicateBuilder setLastPerformDate:now];
-            
-            expect(predicateBuilder.lastPerformDate).toEqual(now);
-            
-        });
+        NSDate * now = [NSDate date];
+        [predicateBuilder setLastPerformDate:now];
+        
+        expect(predicateBuilder.lastPerformDate).toEqual(now);
         
     });
     
