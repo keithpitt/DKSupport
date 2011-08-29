@@ -128,7 +128,7 @@ The key is in one of the values
 
 They key is not in one of the values
 
-    [predicateBuilder where:@"username" equals:[NSArray arrayWithObjects:@"stevejobs", @"waz", nil]];
+    [predicateBuilder where:@"username" equals:[NSArray isNotIn:@"stevejobs", @"waz", nil]];
 
 `- (id)where:(NSString *)key startsWith:(NSString *)value;`
 
