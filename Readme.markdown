@@ -245,6 +245,13 @@ written by Adam Elliot which can be found here: https://github.com/adamelliot/In
 I took the project - fixed a few issues - moved the test suite into
 Expecta and Cedar, and included it as part of `DKSupport`.
 
+You use the inflections like so:
+
+```objective-c
+[@"dog" pluralize]; // returns "dogs"
+[@"dogs" singularize]; // returns "dog"
+```
+
 `- (NSString *)pluralize;`
 
 Returns the plural form of the word in the string.
