@@ -38,7 +38,7 @@ and [The Frontier Group](http://www.thefrontiergroup.com.au)
         Foundation.framework
         UIKit.framework
 
-7. Add `-all_load -ObjC` to the `Other Linker Flags` build setting
+7. Add `-all_load -ObjC -lstdc++` to the `Other Linker Flags` build setting
 
 8. Add `#import "DKSupport.h"` in your `Prefix.pch` file
 
