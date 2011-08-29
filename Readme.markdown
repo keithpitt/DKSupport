@@ -292,7 +292,7 @@ Returns all the elements in the array where the block returns `TRUE`
 `- (NSString *)format:(NSString *)format;`
 
 Provides a quick way of formatting an `NSDate`. For possible formats, see the
-following http://unicode.org/reports/tr35/tr35-10.html#Date_Format_Patterns
+following [UTS #35: Unicode Locale Data Markup Language](http://unicode.org/reports/tr35/tr35-10.html#Date_Format_Patterns)
 
     NSDate * date = [NSDate date]
 
