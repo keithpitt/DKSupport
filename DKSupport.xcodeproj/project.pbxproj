@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		531E0E63140112CC007B0BB5 /* DKPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 531E0E60140112CC007B0BB5 /* DKPredicate.m */; };
-		531E0E64140112CC007B0BB5 /* DKPredicateBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 531E0E62140112CC007B0BB5 /* DKPredicateBuilder.m */; };
-		531E0E68140112F9007B0BB5 /* DKPredicateBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 531E0E66140112F9007B0BB5 /* DKPredicateBuilderSpec.m */; };
-		531E0E69140112F9007B0BB5 /* DKPredicateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 531E0E67140112F9007B0BB5 /* DKPredicateSpec.m */; };
 		537874201401045E00D9B746 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5378741F1401045E00D9B746 /* main.m */; };
 		53787437140104AD00D9B746 /* NSArray+Enumurable.m in Sources */ = {isa = PBXBuildFile; fileRef = 537873CB1401040F00D9B746 /* NSArray+Enumurable.m */; };
 		53787438140104AD00D9B746 /* NSDate+Conversions.m in Sources */ = {isa = PBXBuildFile; fileRef = 537873CE1401040F00D9B746 /* NSDate+Conversions.m */; };
@@ -42,12 +38,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		531E0E5F140112CC007B0BB5 /* DKPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKPredicate.h; sourceTree = "<group>"; };
-		531E0E60140112CC007B0BB5 /* DKPredicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKPredicate.m; sourceTree = "<group>"; };
-		531E0E61140112CC007B0BB5 /* DKPredicateBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKPredicateBuilder.h; sourceTree = "<group>"; };
-		531E0E62140112CC007B0BB5 /* DKPredicateBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKPredicateBuilder.m; sourceTree = "<group>"; };
-		531E0E66140112F9007B0BB5 /* DKPredicateBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKPredicateBuilderSpec.m; sourceTree = "<group>"; };
-		531E0E67140112F9007B0BB5 /* DKPredicateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKPredicateSpec.m; sourceTree = "<group>"; };
 		537873C81401040F00D9B746 /* DKSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKSupport.h; sourceTree = "<group>"; };
 		537873CA1401040F00D9B746 /* NSArray+Enumurable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Enumurable.h"; sourceTree = "<group>"; };
 		537873CB1401040F00D9B746 /* NSArray+Enumurable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Enumurable.m"; sourceTree = "<group>"; };
@@ -133,17 +123,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		531E0E5E140112CC007B0BB5 /* DKPredicateBuilder */ = {
-			isa = PBXGroup;
-			children = (
-				531E0E5F140112CC007B0BB5 /* DKPredicate.h */,
-				531E0E60140112CC007B0BB5 /* DKPredicate.m */,
-				531E0E61140112CC007B0BB5 /* DKPredicateBuilder.h */,
-				531E0E62140112CC007B0BB5 /* DKPredicateBuilder.m */,
-			);
-			path = DKPredicateBuilder;
-			sourceTree = "<group>";
-		};
 		537873BE140103BE00D9B746 = {
 			isa = PBXGroup;
 			children = (
@@ -160,7 +139,6 @@
 			children = (
 				537873C81401040F00D9B746 /* DKSupport.h */,
 				53F18BAA1401510800E1A6E8 /* DKLogger.h */,
-				531E0E5E140112CC007B0BB5 /* DKPredicateBuilder */,
 				537873C91401040F00D9B746 /* NSArray */,
 				537873CC1401040F00D9B746 /* NSDate */,
 				537873D11401040F00D9B746 /* NSMutableArray */,
@@ -287,8 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				5378741A1401045E00D9B746 /* Supporting Files */,
-				531E0E66140112F9007B0BB5 /* DKPredicateBuilderSpec.m */,
-				531E0E67140112F9007B0BB5 /* DKPredicateSpec.m */,
 				53787452140105A500D9B746 /* NSArray+EnumurableSpec.m */,
 				53787453140105A500D9B746 /* NSDate+InitializersSpec.m */,
 				53787454140105A500D9B746 /* NSNumber+InitializersSpec.m */,
@@ -439,10 +415,6 @@
 				5378745D140105A500D9B746 /* NSString+InitializersSpec.m in Sources */,
 				5378747A140105F800D9B746 /* ISO8601DateFormatter.m in Sources */,
 				5378747B140105F800D9B746 /* RegexKitLite.m in Sources */,
-				531E0E63140112CC007B0BB5 /* DKPredicate.m in Sources */,
-				531E0E64140112CC007B0BB5 /* DKPredicateBuilder.m in Sources */,
-				531E0E68140112F9007B0BB5 /* DKPredicateBuilderSpec.m in Sources */,
-				531E0E69140112F9007B0BB5 /* DKPredicateSpec.m in Sources */,
 				53F18B8E1401506400E1A6E8 /* LoggerClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

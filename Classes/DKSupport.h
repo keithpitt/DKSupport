@@ -6,8 +6,6 @@
 //  Copyright 2011 Mostly Disco. All rights reserved.
 //
 
-#import "DKPredicateBuilder.h"
-
 #import "NSArray+Enumurable.h"
 
 #import "NSDate+Conversions.h"
