@@ -56,55 +56,63 @@ Ruby (http://www.ruby-doc.org/core/classes/Enumerable.html)
 Create an instance of `NSArray` of all the objects returned by the block.
 This is similar to the `map` method in Ruby.
 
-    NSArray * array = [NSArray arrayWithObjects:
-                       [NSDictionary dictionaryWithObject:@"Keith" forKey:@"name"],
-                       [NSDictionary dictionaryWithObject:@"Jordan" forKey:@"name"],
-                       nil];
+```objective-c
+NSArray * array = [NSArray arrayWithObjects:
+                   [NSDictionary dictionaryWithObject:@"Keith" forKey:@"name"],
+                   [NSDictionary dictionaryWithObject:@"Jordan" forKey:@"name"],
+                   nil];
 
-    // Returns "Keith" and "Jordan"
-    NSArray * collected = [array collectWithBlock:^(NSObject * object) {
-        return [object valueForKey:@"name"];
-    }];
+// Returns "Keith" and "Jordan"
+NSArray * collected = [array collectWithBlock:^(NSObject * object) {
+    return [object valueForKey:@"name"];
+}];
+```
 
 `- (NSArray *)collectWithKey:(NSString *)key;`
 
 Will call `objectForKey` on all the elements in the array with the key
 provided.
 
-    NSArray * array = [NSArray arrayWithObjects:
-                       [NSDictionary dictionaryWithObject:@"Keith" forKey:@"name"],
-                       [NSDictionary dictionaryWithObject:@"Jordan" forKey:@"name"],
-                       nil];
+```objective-c
+NSArray * array = [NSArray arrayWithObjects:
+                   [NSDictionary dictionaryWithObject:@"Keith" forKey:@"name"],
+                   [NSDictionary dictionaryWithObject:@"Jordan" forKey:@"name"],
+                   nil];
 
-    // Returns "Keith" and "Jordan"
-    NSArray * collected = [array collectWithKey:@"name"];
+// Returns "Keith" and "Jordan"
+NSArray * collected = [array collectWithKey:@"name"];
+```
 
 `- (NSObject *)findWithBlock:(NSArrayFindCallbackBlock)block;`
 
 Returns the first result where the block returns `TRUE`
 
-    NSArray * array = [NSArray arrayWithObjects:
-                     [NSDictionary dictionaryWithObject:@"foo" forKey:@"bar"],
-                     [NSDictionary dictionaryWithObject:@"not foo" forKey:@"bar"]
-                     nil];
+```objective-c
+NSArray * array = [NSArray arrayWithObjects:
+                 [NSDictionary dictionaryWithObject:@"foo" forKey:@"bar"],
+                 [NSDictionary dictionaryWithObject:@"not foo" forKey:@"bar"]
+                 nil];
 
-    NSDictionary * found = array findWithBlock:^(NSObject * object) {
-        return [[object valueForKey:@"bar"] isEqualToString:@"not foo"];
-    }];
+NSDictionary * found = array findWithBlock:^(NSObject * object) {
+    return [[object valueForKey:@"bar"] isEqualToString:@"not foo"];
+}];
+```
 
 `- (NSArray *)selectWithBlock:(NSArraySelectCallbackBlock)block;`
 
 Returns all the elements in the array where the block returns `TRUE`
 
-    NSArray * array = [NSArray arrayWithObjects:
-                        [NSDictionary dictionaryWithObject:@"foo" forKey:@"bar"],
-                        [NSDictionary dictionaryWithObject:@"foo" forKey:@"bar"],
-                        [NSDictionary dictionaryWithObject:@"not foo" forKey:@"bar"],
-                        nil];
+```objective-c
+NSArray * array = [NSArray arrayWithObjects:
+                    [NSDictionary dictionaryWithObject:@"foo" forKey:@"bar"],
+                    [NSDictionary dictionaryWithObject:@"foo" forKey:@"bar"],
+                    [NSDictionary dictionaryWithObject:@"not foo" forKey:@"bar"],
+                    nil];
 
-    NSArray * collected = [array selectWithBlock:^(NSObject * object) {
-      return [[object valueForKey:@"bar"] isEqualToString:@"foo"];
-    }];
+NSArray * collected = [array selectWithBlock:^(NSObject * object) {
+  return [[object valueForKey:@"bar"] isEqualToString:@"foo"];
+}];
+```
 
 ### NSDate
 
@@ -115,44 +123,56 @@ Returns all the elements in the array where the block returns `TRUE`
 Provides a quick way of formatting an `NSDate`. For possible formats, see the
 following [UTS #35: Unicode Locale Data Markup Language](http://unicode.org/reports/tr35/tr35-10.html#Date_Format_Patterns)
 
-    NSDate * date = [NSDate date]
+```objective-c
+NSDate * date = [NSDate date]
 
-    NSLog(@"%@", [date format:@"yyyy-MM-dd"]);
+NSLog(@"%@", [date format:@"yyyy-MM-dd"]);
+```
 
 `- (NSDate *)utc;`
 
 Returns the date converted to UTC
 
-    // The current time in UTC
-    NSDate * utcDate = [[NSDate date] utc];
+```objective-c
+// The current time in UTC
+NSDate * utcDate = [[NSDate date] utc];
+```
 
 `- (NSDate *)beginingOfDay;`
 
 Return an `NSDate` with the time portion set to the beginning of the day (00:00:00)
 
-    // Returns the begining of today
-    NSDate * beginingOfDay = [[NSDate date] beginingOfDay];
+```objective-c
+// Returns the begining of today
+NSDate * beginingOfDay = [[NSDate date] beginingOfDay];
+```
 
 `- (NSDate *)endOfDay;`
 
 Return an `NSDate` with the time portion set to the end of the day (23:59:59)
 
-    // Returns the end of today
-    NSDate * endOfDay = [[NSDate date] endOfDay];
+```objective-c
+// Returns the end of today
+NSDate * endOfDay = [[NSDate date] endOfDay];
+```
 
 `- (BOOL)isSameDayAs:(NSDate*)date;`
 
 Will return `TRUE` if the provided `NSDate` is on the same day
 
-    // Will return TRUE
-    [[NSDate date] isSameDayAs:[NSDate date]];
+```objective-c
+// Will return TRUE
+[[NSDate date] isSameDayAs:[NSDate date]];
+```
 
 `- (BOOL)isToday;`
 
 Will return `TRUE` if the date provided is on the same day as
 
-    // Will return TRUE
-    [[NSDate date] isToday];
+```objective-c
+// Will return TRUE
+[[NSDate date] isToday];
+```
 
 #### Initializers
 
@@ -160,7 +180,9 @@ Will return `TRUE` if the date provided is on the same day as
 
 Create an instance of `NSDate` using the `ISO8601DateFormatter`
 
-    NSDate * date = [NSDate dateFromString:@"05/12/2011 12:52:13 UTC"];
+```objective-c
+NSDate * date = [NSDate dateFromString:@"05/12/2011 12:52:13 UTC"];
+```
 
 ### NSMutableArray
 
@@ -170,9 +192,11 @@ Create an instance of `NSDate` using the `ISO8601DateFormatter`
 
 Modifies the current `NSMutableArray` and reverse the order of the elements.
 
-    NSMutableArray * array = [NSMutableArray arrayWithObjects:@"a", @"b", @"c"];
+```objective-c
+NSMutableArray * array = [NSMutableArray arrayWithObjects:@"a", @"b", @"c"];
 
-    [array reverse]; // Array is now "c", "b", "a"
+[array reverse]; // Array is now "c", "b", "a"
+```
 
 ### NSNumber
 
@@ -182,7 +206,9 @@ Modifies the current `NSMutableArray` and reverse the order of the elements.
 
 Returns an autoreleased `NSNumber` from the string provided.
 
-    NSNumber * number = [NSNumber numberWithString:@"124.6345"];
+```objective-c
+NSNumber * number = [NSNumber numberWithString:@"124.6345"];
+```
 
 ### NSObject
 
@@ -194,9 +220,11 @@ Provides an easy way to execute a block after a period. Because this method is
 on `NSObject` the object your executing this on must have extended from `NSObject`
 (which is most objects in Cocoa).
 
-    [self performBlock:^{
-        NSLog(@"More energy...");
-    } afterDelay:1000];
+```objective-c
+[self performBlock:^{
+    NSLog(@"More energy...");
+} afterDelay:1000];
+```
 
 ### NSString
 
@@ -206,7 +234,9 @@ on `NSObject` the object your executing this on must have extended from `NSObjec
 
 Returns an MD5 hash of the string
 
-    [@"Hey this is Arnold..." md5];
+```objective-c
+[@"Hey this is Arnold..." md5];
+```
 
 #### Inflections
 
@@ -281,7 +311,9 @@ Capitalizes the first letter and makes everything else lower case.
 
 Generates a string with random characters [a-z0-9] with the given length
 
-    NSString * random = [NSString stringWithRandom:12];
+```objective-c
+NSString * random = [NSString stringWithRandom:12];
+```
 
 ### UIAlertView
 
@@ -289,33 +321,41 @@ Generates a string with random characters [a-z0-9] with the given length
 
 A quick way to show a `UIAlertView` from an `NSError`
 
-    // Some operation that returns an NSError
-    // ...
+```objective-c
+// Some operation that returns an NSError
+// ...
 
-    [UIAlertView alertWithError:error title:@"Something Broke..."];
+[UIAlertView alertWithError:error title:@"Something Broke..."];
+```
 
 `+ (UIAlertView *)alertWithMessage:(NSString*)message title:(NSString*)title;`
 
 A quick way of showing a `UIAlertView` with a message and a title
 
-    [UIAlertView alertWithMessage:@"Something happened" title:@"Notice"];
+```objective-c
+[UIAlertView alertWithMessage:@"Something happened" title:@"Notice"];
+```
 
 `+ (UIAlertView *)alertWithMessage:(NSString*)message title:(NSString*)title cancelButtonTitle:(NSString *)cancelButtonTitle;`
 
-    [UIAlertView alertWithMessage:@"Something happened: title:@"Notice" cancelButtonTitle:@"Go Away!"];
+```objective-c
+[UIAlertView alertWithMessage:@"Something happened: title:@"Notice" cancelButtonTitle:@"Go Away!"];
+```
 
 `DKSupport` also provides a convenient way to generate a UIAlertView and
 handle responses via a block syntax
 
-    [UIAlertView alertWithMessage:@"Are you sure?"
-                            title:@"Save Document"
-                cancelButtonTitle:@"No"
-                otherButtonTitles:[NSArray arrayWithObjects:@"Yes", @"Yes and quit", nil]
-                          dismiss:^(int buttonIndex) {
-                              NSLog(@"User selected %i", buttonIndex);
-                          } cancel:cancel^{
-                              NSLog(@"User selected no");
-                          }];
+```objective-c
+[UIAlertView alertWithMessage:@"Are you sure?"
+                        title:@"Save Document"
+            cancelButtonTitle:@"No"
+            otherButtonTitles:[NSArray arrayWithObjects:@"Yes", @"Yes and quit", nil]
+                      dismiss:^(int buttonIndex) {
+                          NSLog(@"User selected %i", buttonIndex);
+                      } cancel:cancel^{
+                          NSLog(@"User selected no");
+                      }];
+```
 
 ### UIViewController
 
@@ -326,7 +366,9 @@ used by `UINavigationController`. As of iOS 4.0, this property is read
 only. This method allows you to manually set the `parentViewController`
 property of a `UIViewController`.
 
-    [controller setParentController:someOtherViewController];
+```objective-c
+[controller setParentController:someOtherViewController];
+```
 
 ## Running Specs
 
