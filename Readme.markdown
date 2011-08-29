@@ -307,14 +307,14 @@ Returns the date converted to UTC
 
 `- (NSDate *)beginingOfDay;`
 
-Return an `NSDate` with the time portion set to the beginning of the day
+Return an `NSDate` with the time portion set to the beginning of the day (00:00:00)
 
     // Returns the begining of today
     NSDate * beginingOfDay = [[NSDate date] beginingOfDay];
 
 `- (NSDate *)endOfDay;`
 
-Return an `NSDate` with the time portion set to the beginning of the day
+Return an `NSDate` with the time portion set to the end of the day (23:59:59)
 
     // Returns the end of today
     NSDate * endOfDay = [[NSDate date] endOfDay];
