@@ -346,7 +346,7 @@ A quick way of showing a `UIAlertView` with a message and a title
 `+ (UIAlertView *)alertWithMessage:(NSString*)message title:(NSString*)title cancelButtonTitle:(NSString *)cancelButtonTitle;`
 
 ```objective-c
-[UIAlertView alertWithMessage:@"Something happened: title:@"Notice" cancelButtonTitle:@"Go Away!"];
+[UIAlertView alertWithMessage:@"Something happened" title:@"Notice" cancelButtonTitle:@"Go Away!"];
 ```
 
 `DKSupport` also provides a convenient way to generate a UIAlertView and
