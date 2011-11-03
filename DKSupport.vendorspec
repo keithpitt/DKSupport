@@ -1,0 +1,21 @@
+# This is a generated version of the vendorspec. Please change the
+# values to suit your library.
+
+Vendor::Spec.new do |s|
+
+  s.name        = "DKSupport"
+  s.version     = "0.1"
+
+  s.authors     = "keithpitt"
+  s.email       = "me@keithpitt.com"
+  s.description = "A collection of utility methods and classes for working with iOS"
+
+  s.source      = "github.com/keithpitt/DKSupport"
+
+  s.files       = `git ls-files Classes`.split("\n")
+
+  s.dependency  "ISO8601DateFormatter"
+  s.dependency  "NSLogger"
+  s.dependency  "RegexKitLite"
+
+end
