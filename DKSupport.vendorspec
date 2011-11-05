@@ -14,8 +14,8 @@ Vendor::Spec.new do |s|
 
   s.files       = `git ls-files Classes`.split("\n")
 
-  s.dependency  "ISO8601DateFormatter"
-  s.dependency  "NSLogger"
-  s.dependency  "RegexKitLite"
+  s.dependency  "ISO8601DateFormatter", "0.5"
+  s.dependency  "NSLogger-Client", "1.0"
+  s.dependency  "RegexKitLite", "4.0"
 
 end
